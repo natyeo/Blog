@@ -17,9 +17,10 @@ defmodule BlogPheonixWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+
+    resources "/posts", PostController
   end
 
-  resources "/posts", PostController
   # Other scopes may use custom stacks.
   # scope "/api", BlogPheonixWeb do
   #   pipe_through :api
